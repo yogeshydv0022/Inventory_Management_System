@@ -4,8 +4,7 @@ Welcome to the Inventory Management System (IMS) project! This system is designe
 
 ## Table of Contents
 
-[![Watch the video](https://raw.githubusercontent.com/yourusername/yourrepository/main/assets/thumbnail.jpg)](https://github.com/yogeshydv0022/Inventory_Management_System/blob/main/screen%20short/Main.mp4))
-
+[![Watch the demo video](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://github.com/yogeshydv0022/Inventory_Management_System/blob/main/screen%20short/Main.mp4)
 IMS_Project
 ├── src/
 │   ├── main/
@@ -134,7 +133,9 @@ IMS_Project
 
 Include an entity relationship diagram (ERD) here to visualize the database structure. This helps in understanding how entities (like Products, Category, Cart, etc.) are related and structured in your system.
 
-![Screenshot of the application](https://github.com/username/repository/blob/main/images/screenshot.png)
+
+![Entity Diagram](https://github.com/yogeshydv0022/Inventory_Management_System/blob/main/screen%20short/ERD.png)
+
 
 
 ## Setup Instructions
