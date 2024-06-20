@@ -49,7 +49,7 @@ public class SecurityConfig {
 						.requestMatchers(HttpMethod.POST, "/ims/auth/**", "/ims/users/**", "/ims/superAdmin/**", "/ims/admin/**")
 						.permitAll()
 						// .requestMatchers(HttpMethod.POST, "/admin/**").permitAll()
-						.requestMatchers(HttpMethod.GET, "/ims/bills/**","/ims/cart/**","/ims/pdf/**" ,"/ism/sales/**").hasRole("ADMIN")
+						.requestMatchers("/ims/bills/**","/ims/cart/**","/ims/pdf/**" ,"/ism/sales/**").hasRole("ADMIN")
 //						.requestMatchers(HttpMethod.PUT, "/ims/admin/**").permitAll()
 //					.requestMatchers(HttpMethod.PUT, "/users/**","/category/**","/books/**").hasRole("ADMIN").anyRequest().authenticated()
 //				.requestMatchers(HttpMethod.DELETE, "/ims/users/**").hasRole("ADMIN")
