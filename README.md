@@ -4,7 +4,8 @@ Welcome to the Inventory Management System (IMS) project! This system is designe
 
 ## Table of Contents
 
-[![Watch the demo video](https://img.youtube.com/vi/dQw4w9WgXcQ/0.jpg)](https://github.com/yogeshydv0022/Inventory_Management_System/blob/main/screen%20short/Main.mp4)
+![Entity Diagram]([https://github.com/yogeshydv0022/Inventory_Management_System/blob/main/screen%20short/ERD.png](https://github.com/yogeshydv0022/Inventory_Management_System/blob/master/gitImages/modalStructure.jpg))
+
 IMS_Project
 ├── src/
 │   ├── main/
