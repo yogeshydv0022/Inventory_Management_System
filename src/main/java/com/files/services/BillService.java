@@ -24,12 +24,14 @@ import com.files.model.Cart;
 import com.files.model.CartItem;
 import com.files.model.ProductBill;
 import com.files.model.Products;
+import com.files.model.Sales;
 import com.files.model.User;
 import com.files.payload.response.BillResponse;
 import com.files.repository.BillRepository;
 import com.files.repository.CartItemRepository;
 import com.files.repository.CartRepository;
 import com.files.repository.ProductRepository;
+import com.files.repository.SalesRepository;
 import com.files.repository.UserRepository;
 import com.itextpdf.kernel.colors.ColorConstants;
 import com.itextpdf.kernel.geom.PageSize;
@@ -60,6 +62,9 @@ public class BillService {
 	
 	@Autowired
 	private ProductRepository productRepository;
+	
+	@Autowired
+	private SalesRepository salesRepository; 
 	
 	
 	@Transactional
@@ -115,6 +120,14 @@ public class BillService {
 
 	        product.setQuantity(product.getQuantity() - quantity);
 	        productRepository.save(product);  // Save the product entity after updating the quantity
+	        
+	        // Create a sales record
+	        Sales sale = new Sales();
+	        sale.setProduct(product);
+	        sale.setQuantity(quantity);
+	        sale.setTotalPrice(cartItem.getSubtotal());
+	        sale.setSaleDate(date);
+	        salesRepository.save(sale);  // Save the sales record
 	    }
 
 	    // Reset user's cart after bill generation

@@ -49,7 +49,7 @@ public class SecurityConfig {
 						.requestMatchers(HttpMethod.POST, "/ims/auth/**", "/ims/users/**", "/ims/superAdmin/**", "/ims/admin/**")
 						.permitAll()
 						// .requestMatchers(HttpMethod.POST, "/admin/**").permitAll()
-						.requestMatchers(HttpMethod.GET, "/ims/bills/**","/ims/cart/**","/ims/pdf/**").hasRole("ADMIN")
+						.requestMatchers(HttpMethod.GET, "/ims/bills/**","/ims/cart/**","/ims/pdf/**" ,"/ism/sales/**").hasRole("ADMIN")
 //						.requestMatchers(HttpMethod.PUT, "/ims/admin/**").permitAll()
 //					.requestMatchers(HttpMethod.PUT, "/users/**","/category/**","/books/**").hasRole("ADMIN").anyRequest().authenticated()
 //				.requestMatchers(HttpMethod.DELETE, "/ims/users/**").hasRole("ADMIN")
@@ -84,7 +84,7 @@ public class SecurityConfig {
 	CorsConfigurationSource corsConfigurationSource() {
 		CorsConfiguration configuration = new CorsConfiguration();
 
-		configuration.setAllowedOrigins(List.of("http://localhost:4200"));
+		configuration.setAllowedOrigins(List.of("http://localhost:8082"));
 		configuration.setAllowedMethods(List.of("GET", "POST","PUT", "DELETE"));
 		configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
 
